@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple personal budget and expense tracker.">
+  <title>My Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-content">
+      <p class="eyebrow">PERSONAL FINANCE</p>
+      <h1>My Budget Tracker</h1>
+      <p class="intro">Track your income and expenses in one place. Stay organized and understand where your money goes.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="add-expense" class="panel expense-form-section" aria-labelledby="add-expense-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">GET STARTED</p>
+          <h2 id="add-expense-title">Add Expense</h2>
+        </div>
+        <span class="section-icon" aria-hidden="true">＋</span>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="expense-name">Expense name</label>
+          <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries">
+        </div>
+
+        <div class="form-group">
+          <label for="expense-amount">Amount (KES)</label>
+          <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g. 1500" min="0" step="0.01">
+        </div>
+
+        <div class="form-group">
+          <label for="expense-category">Category</label>
+          <select id="expense-category" name="expense-category">
+            <option value="">Choose a category</option>
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="bills">Bills</option>
+            <option value="shopping">Shopping</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <button type="button" class="add-button">Add Expense</button>
+        <p class="form-note">This is a static preview. Expense tracking will be added in a later project week.</p>
+      </form>
+    </section>
+
+    <section id="expenses" class="panel expenses-section" aria-labelledby="expenses-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR ACTIVITY</p>
+          <h2 id="expenses-title">Your Expenses</h2>
+        </div>
+      </div>
+      <div class="empty-state">
+        <span class="empty-icon" aria-hidden="true">▤</span>
+        <h3>No expenses yet</h3>
+        <p>Your expenses will appear here once you start adding them.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>My Budget Tracker · Keep your finances organized</p>
+  </footer>
+</body>
+</html>
